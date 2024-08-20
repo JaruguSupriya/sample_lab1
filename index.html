@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colorful Web Page</title>
+    <title>Colorful Portfolio</title>
     <style>
-        /* Reset some default styles */
+        /* Basic reset and global styles */
         body, h1, h2, p, ul {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Basic styling */
         body {
             font-family: 'Arial', sans-serif;
-            line-height: 1.6;
             color: #333;
-            background-color: #f0f0f0;
+            background-color: #f5f5f5;
+            line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(135deg, #f06, #f79);
+            background: linear-gradient(135deg, #ff6f61, #ffcc00);
             color: #fff;
-            padding: 1rem 0;
+            padding: 1rem;
             text-align: center;
         }
 
@@ -45,7 +44,7 @@
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
         nav ul li a:hover {
@@ -55,44 +54,60 @@
 
         main {
             padding: 2rem;
+            text-align: center;
         }
 
-        section {
-            margin-bottom: 2rem;
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
             padding: 1rem;
-            border-radius: 8px;
         }
 
-        #home {
-            background: #ffde59;
+        .portfolio-item {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-item h3 {
+            background: #ffcc00;
             color: #333;
+            margin: 0;
+            padding: 1rem;
+            font-size: 1.5rem;
         }
 
-        #services {
-            background: #ff6f61;
-            color: #fff;
-        }
-
-        #about {
-            background: #4db6ac;
-            color: #fff;
-        }
-
-        #contact {
-            background: #ab47bc;
-            color: #fff;
-        }
-
-        h2 {
-            margin-bottom: 1rem;
-            font-size: 2rem;
+        .portfolio-item p {
+            padding: 1rem;
+            color: #666;
         }
 
         footer {
             background: #333;
             color: #fff;
             text-align: center;
-            padding: 1rem 0;
+            padding: 1rem;
             position: fixed;
             width: 100%;
             bottom: 0;
@@ -101,36 +116,40 @@
 </head>
 <body>
     <header>
-        <h1>Colorful Web Page</h1>
+        <h1>My Colorful Portfolio</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="home">
-            <h2>Welcome to Our Colorful Website</h2>
-            <p>Explore the vibrant and engaging design of our site.</p>
-        </section>
-        <section id="services">
-            <h2>Our Services</h2>
-            <p>Discover the range of services we offer with a splash of color.</p>
-        </section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Learn more about our team and our colorful journey.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Get in touch with us through our colorful contact form.</p>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio">
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 1">
+                    <h3>Project One</h3>
+                    <p>Description of Project One. This is a brief summary of the project.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 2">
+                    <h3>Project Two</h3>
+                    <p>Description of Project Two. This is a brief summary of the project.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 3">
+                    <h3>Project Three</h3>
+                    <p>Description of Project Three. This is a brief summary of the project.</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Colorful Web Page</p>
+        <p>&copy; 2024 My Colorful Portfolio</p>
     </footer>
 </body>
 </html>
